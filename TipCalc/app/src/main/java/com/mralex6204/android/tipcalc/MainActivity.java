@@ -78,6 +78,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @OnClick(R.id.btnClear)
+    public void handleClickClear(){
+        fragmentListener.clearList();
+    }
+
     private void handleTipChange(int change){
         int tipPercentage = this.getTipPercentage();
 
@@ -147,9 +152,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void about() {
-        TipCalcApp app = (TipCalcApp) this.getApplication();
+//        TipCalcApp app = (TipCalcApp)this.getApplication();
         Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(app.getProfileUrl()));
+        i.setData(Uri.parse(TipCalcApp.PROFILE_URL));
         startActivity(i);
     }
 

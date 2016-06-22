@@ -38,7 +38,7 @@ public class TipRecord {
     }
 
     public double getTip() {
-        return (bill * (tipPercentage / 100.00));
+        return bill * (tipPercentage / 100d);
     }
 
     public String getDateFormatted() {
@@ -47,4 +47,8 @@ public class TipRecord {
         return simpleDateFormat.format(timestamp);
     }
 
+    @Override
+    public String toString(){
+        return  "Date - "+ this.getDateFormatted()+" - " +this.bill + " * ("+this.tipPercentage+"/100) = "+this.getTip();
+    }
 }

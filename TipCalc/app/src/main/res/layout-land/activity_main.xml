@@ -11,7 +11,7 @@
     tools:context="com.mralex6204.android.tipcalc.MainActivity">
 
     <include
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tipContent"
         layout="@layout/content_tip"/>
@@ -19,9 +19,13 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tipContent"
         android:id="@+id/fragmentList"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:name="com.mralex6204.android.tipcalc.fragments.TipHistoryListFragment"
-        tools:layout="@layout/fragment_tip_history_list" />
+        tools:layout="@layout/fragment_tip_history_list"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tipContent"
+        android:layout_toEndOf="@+id/tipContent"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
