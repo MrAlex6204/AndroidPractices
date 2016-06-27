@@ -1,8 +1,12 @@
 package com.mralex6204.android.tipcalc.activities;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.mralex6204.android.tipcalc.R;
@@ -35,6 +39,11 @@ public class TipDetailActivity extends AppCompatActivity {
         //atravez del intent
         Intent i = this.getIntent();
 
+        //Obtenemos el ActionBar dek Activity
+        ActionBar ab = this.getSupportActionBar();
+        //Habilitamos el boton home, para que nos de opcion de regresar
+        ab.setDisplayHomeAsUpEnabled(true);
+
         //===>Dar formato al los values
         String
                 strTotal = String.format(getString(R.string.tipdetail_message_bill),
@@ -47,5 +56,21 @@ public class TipDetailActivity extends AppCompatActivity {
         txtTip.setText(strTip);
         txtTimeStamp.setText(i.getStringExtra(DATE_KEY));
 
+
     }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        Log.d("Action Bar Option :",Integer.toString(item.getItemId()));
+
+        //===>Obtenemos el Id del boton home, para poder terminar esta activity.
+        if (item.getItemId() == android.R.id.home) {
+            this.finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
 }

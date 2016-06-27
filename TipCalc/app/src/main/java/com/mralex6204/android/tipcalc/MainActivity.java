@@ -86,7 +86,12 @@ public class MainActivity extends AppCompatActivity {
     private void handleTipChange(int change){
         int tipPercentage = this.getTipPercentage();
 
-        tipPercentage += change;
+        Log.d("Tip percantage :",inputPercentage.getText().toString());
+
+        //===>Verificar si ya tenia definido el porcentaje
+        if(!inputPercentage.getText().toString().isEmpty()){
+            tipPercentage += change;
+        }
 
         if(tipPercentage > 0 ){
             inputPercentage.setText(String.valueOf(tipPercentage));

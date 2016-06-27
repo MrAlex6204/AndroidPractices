@@ -11,6 +11,7 @@
     tools:context="com.mralex6204.android.tipcalc.activities.TipDetailActivity">
 
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

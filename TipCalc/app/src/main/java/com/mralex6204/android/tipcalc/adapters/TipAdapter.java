@@ -58,6 +58,7 @@ public class TipAdapter extends RecyclerView.Adapter<TipAdapter.ViewHolder> {
 
         Log.e("Tip percentage ",strTip);
         holder.txtContent.setText(strTip);
+        holder.txtTimeStamp.setText(element.getDateFormatted());
         holder.setOnItemClickListener(element,this.onItemClickListener);
     }
 
@@ -88,6 +89,10 @@ public class TipAdapter extends RecyclerView.Adapter<TipAdapter.ViewHolder> {
         private View view;
         @BindView(R.id.txtContent)
         TextView txtContent;
+
+        @BindView(R.id.txtTimeStamp)
+        TextView txtTimeStamp;
+
 
         public ViewHolder(View itemView) {
             super(itemView);

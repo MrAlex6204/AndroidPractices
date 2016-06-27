@@ -12,5 +12,6 @@
     <string name="detail.message.bill">Total $%,.1f</string>
     <string name="global.message.tip">Propina $%,.1f</string>
     <string name="tipdetail.message.bill">Total $%,.1f</string>
+    <string name="tipdetail.button.goback">Go back</string>
 
 </resources>
