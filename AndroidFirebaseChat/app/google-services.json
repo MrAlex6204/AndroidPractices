@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "759633153943",
+    "firebase_url": "https://androidchat-303cb.firebaseio.com",
+    "project_id": "androidchat-303cb",
+    "storage_bucket": "androidchat-303cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759633153943:android:a4ba8fa5ac6c1cc5",
+        "android_client_info": {
+          "package_name": "com.mralex6204.android.androidchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759633153943-ml3v0montv8cp753fg34181rsmt0rngc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9dZZKd17BkTvRkGyUyIslFKsvUIoE5G4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
