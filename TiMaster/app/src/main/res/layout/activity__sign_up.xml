@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity__sign_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mralex6204.android.timaster.activities.signup.Activity_SignUp">
+
+    <TextView
+        android:text="Configuracion"
+        android:textColor="@color/colorSilver"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:fontFamily="serif-monospace"
+        android:layout_marginTop="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Datos para restablecer password"
+        android:textColor="@color/colorSilver"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:fontFamily="serif-monospace"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/wrapperPasswordConfirm"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/wrapperUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/Smoke"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de usuario"
+            android:inputType="text"
+            android:id="@+id/txtUserName"
+            android:textColor="@color/colorSilver"
+            style="@style/AppThemeSilver" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/wrapperPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/Smoke"
+        android:layout_below="@+id/wrapperUserName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:id="@+id/txtPassword"
+            android:textColor="@color/colorSilver"
+            style="@style/AppThemeSilver" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/wrapperPasswordConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/Smoke"
+        android:layout_below="@+id/wrapperPassword"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar password"
+            android:inputType="textPassword"
+            android:id="@+id/txtPasswordConfirm"
+            android:textColor="@color/colorSilver"
+            style="@style/AppThemeSilver" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutButtons"
+        android:gravity="bottom|center"
+        android:layout_below="@+id/wrapperAnswer"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="107dp">
+
+        <Button
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:id="@+id/btnSignup"
+            android:layout_marginTop="49dp"
+            android:layout_alignParentStart="true" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:text="Datos para restablecer password"
+        android:textColor="@color/colorSilver"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:fontFamily="serif-monospace"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/wrapperPasswordConfirm"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/wrapperQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/Smoke"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pregunta de seguridad"
+            android:inputType="text"
+            android:id="@+id/txtQuestion"
+            android:textColor="@color/colorSilver"
+            style="@style/AppThemeSilver" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/wrapperAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/Smoke"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/wrapperQuestion"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Respuesta"
+            android:inputType="text"
+            android:id="@+id/txtAnswer"
+            android:textColor="@color/colorSilver"
+            style="@style/AppThemeSilver" />
+    </android.support.design.widget.TextInputLayout>
+</RelativeLayout>

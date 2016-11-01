@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral() //Se requiere agregar mavenCentral para que funcione ButterKnife
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        //Se requiere agregar este classpath para que funcione ButterKnife
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+
+
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext{
+
+    /*Android support*/
+    supportLibraryVersion = '24.0.0-beta1'
+    /*ButterKnife*/
+    butterknifeVersion = '8.1.0'
+    /*Eventbus*/
+    eventbusVersion = '3.+'
+
+    /*Otros componentes*/
+    circleImageViewVersion = '2.+'
+    glideVersion = '3.+'
+
+}
